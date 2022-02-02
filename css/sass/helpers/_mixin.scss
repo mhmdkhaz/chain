@@ -1,0 +1,135 @@
+@mixin position {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+@mixin  flexcolumn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin  key($nameanimate) {
+    @keyframes #{$nameanimate} {
+        @content;
+    }
+}
+
+@mixin text {
+    h4{
+        margin: $margintop;
+        color: $colorfontblack;
+        font-size: 45px;
+        @media (max-width : $minmobile) {
+            font-size: 35px;
+        }
+    }
+        span{
+            color: $colorfontblue;
+        }
+}
+
+@mixin  shadow {
+    transition: all 0.1s linear;
+    background-color: $colorwhite;
+    box-shadow: $boxshadow;
+    width: 100%;
+    padding: $padingelement;
+    transition: all 0.5s linear;
+    &:hover {
+    background-image: url(../images/service-bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $colorwhite;
+    }
+}
+
+@mixin  pargraph {
+    font-size: $fontsize;
+    line-height: 30px;
+    font-weight: 300;
+    color: $colorfontblack;
+    letter-spacing: 1px;
+}
+
+@mixin  flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexcolumn {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+// start in footer
+@mixin  textfooter {
+    font-size: 20px;
+    color: $colorwhite;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+@mixin ulfooter {
+    display: inline;
+    max-width: 40%;
+    float: left;
+    margin-right: 10%;
+    list-style: none;
+}
+
+@mixin  lifooter {
+      color: $colorwhite;
+      text-decoration: none;
+      font-size: $fontsize;
+}
+
+// start in social 
+@mixin  social {
+    display: flex;
+    justify-content: space-between;
+    clear: both;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: #F4F4F2;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+@mixin popupheader{
+    background: #F4F4F2;
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #DDD;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin popupheaderspan{
+    padding: 10px 15px;
+    background: $colorfontblue;
+    cursor: pointer;
+    color: $colorwhite;
+    font-size: $fontsize;
+}
+
+@mixin socialbox{
+    background-color: $colorwhite;
+    width: 330px;
+    box-shadow: $boxshadow;
+    position: fixed;
+    top: 15%;
+}

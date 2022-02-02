@@ -1,0 +1,763 @@
+.active{
+  color: $colorfontblue
+}
+// start in loader
+.apperent_loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $colorwhite;
+  width: 100%;
+  height: 100%;
+  z-index: 111111;
+  .loader {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    border-radius: 50%;
+    border-bottom: 16px solid #000;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 1.5s linear infinite;
+    box-shadow:  rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 0px 4px 6px;
+   
+   @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    @media (max-width: $minmobile) {
+      left: 40%;
+    }
+  }
+}
+// end in loader
+
+// start in sign in
+.nonesocial{
+  display: none;
+  background: #000;
+  width: 100%;
+  height: 100%;
+  box-shadow: $boxshadow;
+}
+.popupContainer{
+  display: block;
+  opacity: 1;
+  z-index: 11000;
+  position: fixed; 
+  opacity: 1; 
+  left: 50%;
+  margin-left: -165px;
+    .popupHeader{
+      @include popupheader;
+      span{
+        @include popupheaderspan;
+      }
+  }
+  .social_login{
+    @include socialbox;
+    .social_box{
+      @include social;
+      span{
+        color: $colorPargraph;
+        i{
+          color:$colorwhite;
+        }
+      }
+    }
+    .centeredText{
+      color: #afafaf;
+      text-align: center;
+      margin: 20px 0;
+      clear: both;
+      overflow: hidden;
+      text-transform: capitalize; 
+    }
+    .action_btns{
+      @include flexrow;
+      margin: 20px;
+    }
+  }
+
+  .social_register , .social_sign{
+    @include socialbox;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    @include social;
+    .popupHeader{
+      @include popupheader;
+      span{
+        @include popupheaderspan;
+      }
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      label{
+        color: #afafaf;
+        margin-top: $margintop;
+      }
+      input{
+        display: block;
+        // width: 90%;
+        padding: 10px;
+        margin-top: $margintop;
+        border: 1px solid #DDD;
+        color: #666;
+      }
+      .checkbox{
+        display: flex;
+        justify-content: space-between;
+        input{
+          width: 5%;
+          height: 25px;
+        }
+        label{
+          width: 80%;
+        }
+      }
+    }
+    .action_btns{
+      @include flexrow;
+      justify-content: space-between;
+      margin-top: $margintop;
+    }
+  }
+}
+// end in sign in
+
+header { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  justify-items: center;
+  align-items: center;
+  @media (max-width: $minmobile) {
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+  }
+  @media (max-width: $maxmeiumm) {
+    grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+  }
+  .left-img {
+    transition: all .2s linear;
+    position: relative;
+    left: -100%;
+    width: 100%;
+    @media (max-width: $minmobile) {
+      margin-top: 50%;
+    }
+    @media (max-width: $maxmeiumm) {
+      margin-top: 50%;
+    }
+    img {
+      width: 100%;
+      @media (max-width: $minmobile) {
+        display: none;
+      }
+      @media (max-width: $maxmeiumm) {
+        display: none;
+      }
+    }
+    .centerText {
+      position: absolute;
+      top: 30%;
+      width: 70%;
+      text-align: center;
+      @media (max-width: $minmobile) {
+        width: 100%;
+      }
+      @media (max-width: $maxmeiumm) {
+        position: relative;
+        width: 100%;
+        top: -50px;
+      }
+      h1 {
+        z-index: 2;
+        font-weight: 700;
+        line-height: 70px;
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+      p {
+        color: $colorfontblack;
+        font-weight: 400;
+        line-height: 2;
+      }
+    }
+    .allbtn {
+      @include flexrow;
+      margin: 20px;
+    }
+  }
+  .right-img {
+    transition: all .2s linear;
+    opacity: 0;
+    .content-img{
+      transition: all .3s linear;
+      img{
+        width: 400px;
+        left: -100%;
+      }
+    }
+  }
+}
+
+// start in amazing
+
+  .amazing {
+    position: relative;
+    @media (max-width: $minmobile) {
+      margin-top: $margintopsection
+    }
+    .text {
+      @include flexcolumn;
+      text-align: center;
+      @include text;
+      line-height: 1.8;
+      p {
+        margin: $margintop;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 300;
+        text-align: center;
+        @media (max-width: $minmobile) {
+          font-size: 25px;
+        }
+      }
+      .back {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+    .all-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
+      .box {
+        transition: all 0.2s linear;
+        background-color: $colorwhite;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 100%;
+        padding: $padingelement;
+        border-top-right-radius: $radius;
+        transition: all 0.5s linear;
+        transform: scale(0);
+        &:hover {
+          background-image: url(../images/service-bg.jpg);
+          background-position: right top;
+          background-repeat: no-repeat;
+          background-size: cover;
+          color: $colorwhite;
+        }
+        &:hover .text-button a {
+          color: $colorwhite;
+        }
+        h4 {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 15px;
+          margin-top: $margintop;
+        }
+        p {
+          font-size: $fontsize;
+          line-height: 30px;
+          font-weight: 300;
+          width: 100%;
+          text-align: start;
+        }
+        .text-button {
+          margin-top: $margintop;
+          a {
+            text-decoration: none;
+            color: $colorfontblue;
+            i {
+              animation: mymove 0.7s infinite;
+              position: relative;
+              margin-left: 8px;
+              @include key(mymove){
+                  0%{
+                      right: 0px;
+                  }
+                  50%{
+                      right: 5px;
+                  }
+                  100%{
+
+                      right: 0px;
+                  }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // start in about
+
+.about{
+  position: relative;
+  margin-top: $margintopsection;
+  @media (max-width: $minmobile) {
+    // left: 50%;
+  }
+  
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: url("../images/services-left-dec.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }   
+  .content-about {
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    justify-content: center;
+    @media (max-width: $minmobile) {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .text-about {   
+      text-align: center;
+      h1 {
+        @include text;
+      }
+      p{
+        font-size: $fontsize;
+        line-height: 30px;
+        font-weight: 300;
+      }
+      .box-about{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        .box{
+          @include shadow;
+          margin: 10px;
+          border-radius: $radius;
+          
+        }
+      }
+      .free{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: start;
+        p{
+          margin: $marginelementnav;
+        }
+      }
+    }
+  }
+  .img-about{
+    margin-top: 50px;
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// start in check
+section{
+  .check{
+
+    .text-check{
+      @include flexcolumn;
+      h1{
+        @include text;
+        margin: 10px
+      }
+      p{
+        @include pargraph;
+        width: 50%;
+        margin: 10px;
+      }
+    }
+  }
+    .apperent-all-element{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      @media (max-width: $minmobile) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+      }
+      
+      .apperent-element{
+        .element-person{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          padding: $padleftandright;
+          @media (max-width: $minmobile) {
+            flex-direction: column;
+            justify-content: center;
+          }
+          .text-person{
+            h4{
+              color: $colorfontblue;
+            }
+            p{
+              color: $colorPargraph;
+              font-weight: 400;
+            }
+          }
+          .textTow{
+            font-weight: 700;
+            color: $colorPargraph;
+          }
+          .star{
+            i{
+              // color: $colorPargraph;
+            }
+            span{
+              color: $colorPargraph;
+            }
+          }
+        }
+     }
+     .all-apperent-box{
+       position: relative;
+      .client-box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background-image: url("../images/client-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: $radius;
+        transition: all .2s linear;
+        display: flex;
+        justify-content: center;
+        .text-client{
+          vertical-align: middle;
+          text-align: center;
+          padding: 30px;
+            p{
+              color: $colorwhite;
+            }
+          }
+          .img-box{
+            position: absolute;
+            top: 110%;
+            width: 80%;
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            .name-client{
+              padding: 11px;
+              h1{
+                color: $colorfontblack;
+                font-size: $fontsize;
+              }
+              p{
+                color: $colorPargraph
+              }
+            }
+            img{
+              border-radius: 50%;
+            }
+          }
+      }
+    }
+  }
+}
+.animateImgBox{
+  transform: scale(1);
+}
+
+// start in price
+section{
+  .price{
+    margin-top: $margintopsection;
+    .text-price{
+      @include flexcolumn;
+      h1{
+        @include text;
+        margin: 10px
+      }
+      p{
+        @include pargraph;
+        width: 50%;
+        margin: 10px;
+      }
+    }
+    .boxes-price{
+      @include flexrow;
+      .box{
+        .content-box{
+            position: relative;
+            transition: all .5s linear;
+            left: -400%;
+            &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(../images/pro-table-top.png);
+            z-index: 0;
+            content: '';
+            width: 270px;
+            height: 251px;
+            z-index: -1;
+            border-radius: $radius;
+            }
+            box-shadow: $boxshadow;
+            padding: 90px 40px;
+            border-radius: $radius;
+            margin: 40px;
+            h4{
+              text-align: center;
+              color: $colorfontblack;
+              text-transform: uppercase;
+            }
+            .img{
+              display: grid;
+              padding: 20px;
+              img{
+                width: 80%;
+                margin: auto;
+              }
+            }
+            ul{
+              list-style: none;
+              li{
+                color: $colorfontblue;
+                font-size: $fontsize;
+                margin-bottom: 15px;
+                text-align: center;
+              }
+              .non{
+                color: $colorPargraph;
+                text-decoration: line-through;
+              }
+            }
+            button{
+              padding: 10px 20px !important;
+              color: $colorfontblue ;
+              border: 1px solid $colorfontblue;
+              text-transform: capitalize;
+              font-size: $fontsize;
+              background-color: #fff;
+              border-radius: 23px;
+              font-weight: 500 !important;
+              letter-spacing: 0.3px !important;
+              transition: all .5s;
+              width: 100%;
+              &:hover{
+                background-color: $colorfontblue;
+                color: $colorwhite;
+              }
+            }
+            .back-img{
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-image: url(../images/pro-table-bottom.png);
+              z-index: 0;
+              content: '';
+              width: 100%;
+              height: 201px;
+              border-radius: $radius;
+              z-index: -1;
+            }
+        }
+      }
+    }
+  }
+}
+
+// start in footer
+footer{
+  background-image: url("../images/footer-bg.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 130px;
+  padding-top: 300px;
+  padding-bottom: 60px;
+  .text-footer{
+    display: grid;
+    @media (max-width : $minmobile) {
+      margin-top: 50px;
+    }
+    h2{
+      color: $colorwhite;
+      text-align: center;
+      width: 50%;
+      margin: auto;
+    }
+    form{
+      display: flex;
+      flex-direction:row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      input{
+        font-size: 15px;
+        color: $colorwhite;
+        outline: none;
+        height: 46px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 1px solid #fff;
+        width: 30%;
+        @media (max-width: $minmobile) {
+          width: 50%;
+        }
+        &::placeholder{
+          color: $colorwhite;
+        }
+      }
+      button{
+        height: 46px;
+        border-radius: 23px;
+        border: 1px solid $colorwhite;
+        background-color: transparent;
+        color: $colorwhite;
+        transition: all .5s;
+        text-align: center;
+        width: 30%;
+        margin-left: 20px;
+        @media (max-width: $minmobile) {
+        width: 50%;
+        margin-left: 0;
+        }
+        &:hover{
+          background-color: $colorwhite;
+          color: $colorfontblack;
+        }
+      }
+    }
+  }
+  .element-footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media (max-width: $minmobile) {
+      justify-content: center;
+    }
+    margin-top: $margintop;
+    .contact-footer{
+      width: 25%;
+      @media (max-width: $minmobile) {
+        width: 100%;
+        margin-top:$margintop;
+        }
+      h4{
+    @include textfooter;
+    @media (max-width : $minmobile){
+      text-align:center;
+    }
+      }
+      p{
+        color: $colorwhite;
+        margin-top: $margintop;
+        @media (max-width : $minmobile){
+          text-align: center;
+        }
+        a{
+          color: $colorwhite;
+          text-decoration: none;
+          @media (max-width : $minmobile){
+            text-align: center;
+          }
+        }
+      }
+    }
+    .about-footer{
+      width: 25%;
+      @media (max-width: $minmobile) {
+        width: 100%;
+        margin-top:$margintop;
+        }
+      h4{
+        @include textfooter;
+        @media (max-width : $minmobile){
+          text-align:center;
+        }
+      }
+      ul{
+        @include ulfooter;
+          @media (max-width: $minmobile) {
+            float: none;
+            text-align: center;
+          }
+        li{
+          margin: 10px;
+          a{
+            @include lifooter;
+          }
+        }
+      }
+    }
+    .Useful-footer{
+      width: 25%;
+      @media (max-width: $minmobile) {
+        width: 100%;
+        margin-top:$margintop;
+        }
+      h4{
+        @include textfooter;
+        @media (max-width : $minmobile){
+          text-align:center;
+        }
+      }
+      ul{
+        @include ulfooter;
+          @media (max-width: $minmobile) {
+            float: none;
+            text-align: center;
+          }
+        li{
+          margin: 10px;
+          a{
+            @include lifooter;
+          }
+        }
+      }
+    }
+    .company-footer{
+      width: 25%;
+      @media (max-width: $minmobile) {
+        width: 100%;
+        text-align: center;
+        margin-top:$margintop;
+        }
+      h4{
+        @include textfooter;
+        @media (max-width : $minmobile){
+          text-align:center;
+        }
+      }
+      p{
+        color: $colorwhite;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+// end in footer

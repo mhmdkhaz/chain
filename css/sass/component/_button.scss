@@ -1,0 +1,16 @@
+.btn{
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    color: #fff !important;
+    text-transform: $textcap;
+    text-decoration: none;
+    font-size: $fontsize;
+    background: rgb(19,175,240);
+    background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+    border: none;
+    border-radius: $radius;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+    transition: all .5s;
+    margin-left: $marginelementnav;
+}

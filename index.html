@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- start in bootstrap -->
+    <link rel="stylesheet" href="sass/bootstrap/bootstrap.min.css">
+    <!-- start in css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- start in font awesome -->
+    <script src="https://kit.fontawesome.com/b5aee8ceb0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- start in loader -->
+    <div class="apperent_loader" id="loader">
+        <div class="loader"></div>
+    </div>
+    <!-- end in loader -->
+
+    <!-- start in navbar -->
+    <nav id="nav">
+        <i class="menu-trigger active"></i>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+                <a href="javascript:void(0);" class="icon" id="iconnav">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="element">
+                <ul id="elementLi">
+                    <a href="javascript:void(0)" class="closebtn" id="colsenav">×</a>
+                    <li>home</li>
+                    <li>about</li>
+                    <li>home</li>
+                    <li>home</li>
+                    <li>home</li>
+                    <div class="gradient-button">
+                        <a class="btn" href="#modal" id="showsign">
+                            <i class="fa fa-sign-in-alt"></i>
+                         Sign In Now
+                        </a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end in navbar -->
+
+    <!-- start in sign in -->
+            <div id="modal" class="popupContainer" >
+
+                <section class="popupBody">
+                    <!-- Social Login -->
+                    <div class="nonesocial" id="Basic">
+                        <div class="social_login">
+                            <div class="popupHeader">
+                                <span class="header_title">Login</span>
+                                <span class="modal_close hide"><i class="fa fa-times"></i></span>
+                            </div>  
+                            <div class="">
+                                <a href="#" class="social_box fb">
+                                    <span class="icon" style="background: #3B5998; padding:10px;"><i class="fab fa-facebook"></i></span>
+                                    <span class="icon_title">Connect with Facebook</span>
+                
+                                </a>
+                
+                                <a href="#" class="social_box google">
+                                    <span class="icon" style="background: #DD4B39; padding:10px;"><i class="fab fa-google-plus"></i></span>
+                                    <span class="icon_title">Connect with Google</span>
+                                </a>
+                            </div>
+                
+                            <div class="centeredText">
+                                <span>Or use your Email address</span>
+                            </div>
+                
+                            <div class="action_btns">
+                                <div class="one_half"><a href="#" class="btn" id="btnlogin">Login</a></div>
+                                <div class="one_half last"><a href="#" id="btnregister" class="btn">Sign up</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Social sign -->
+                    <div class="nonesocial" id="showlogin">
+                        <div class="social_sign">
+                            <div class="popupHeader">
+                                <span class="header_title">Login</span>
+                                <span class="modal_close hide"><i class="fa fa-times"></i></span>
+                            </div>
+                            
+                            <form action="">
+                                <label for="">email</label>
+                                <input type="text">
+                                <label for="">password</label>
+                                <input type="text">
+
+                                <div class="checkbox">
+                                    <input id="remember" type="checkbox">
+                                    <label for="remember">Remember me on this computer</label>
+                                </div>
+                            </form>
+
+                            <div class="action_btns">
+                                <div class="one_half last backtosign"><a href="#" class="btn">back</a></div>
+                                <div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social register -->
+                    <div class="nonesocial" id="showrigester">
+                        <div class="social_register">
+                            <div class="popupHeader">
+                                <span class="header_title">Login</span>
+                                <span class="modal_close hide"><i class="fa fa-times"></i></span>
+                            </div>
+                            
+                            <form action="">
+                                <label for="">full name</label>
+                                <input type="text">
+                                <label for="">confirm password</label>
+                                <input type="password">
+                                <label for="">password</label>
+                                <input type="password">
+    
+                                <div class="checkbox">
+                                    <input id="remember" type="checkbox">
+                                    <label for="remember">Remember me on this computer</label>
+                                </div>
+                            </form>
+    
+                            <div class="action_btns">
+                                <div class="one_half backtosign"><a href="#" id="login_form" class="btn">back</a></div>
+                                <div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+    <!-- end in sign in -->
+
+    <!-- start in header -->
+    <header>
+        <div class="left-img" id="header_left">
+            <img src="images/slider-left-dec.png" alt="">
+            <div class="centerText">
+                <h1>Get The Latest App From App Stores</h1>
+                <p>Chain App Dev is an app landing page HTML5 template based on Bootstrap v5.1.3 CSS layout provided by TemplateMo, a great website to download free CSS templates.</p>
+               <div class="allbtn">
+                    <div class="">
+                        <a href="#contact" class="btn">Free Quote <i class="fab fa-apple" ></i></a>
+                    </div>
+                    <div class="">
+                        <a href="#contact" class="btn">Free Quote <i class="fab fa-google-play" ></i></a>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <div class="right-img" id="header__right">
+            <div class="content-img" id="content-img">
+                <img src="images/slider-dec.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- end in header -->
+
+    <!-- start in amazing -->
+    <section id="home">
+        <div class="amazing">   
+            <div class="container">
+                <div class="text">
+                    <h4>Amazing <span>Services & Features</span> For You</h4>
+                    <img src="images/heading-line-dec.png" alt="">
+                    <p>If you need the greatest collection of HTML templates for your business, please visit TooCSS Blog. If you need to have a contact form PHP script, go to our contact page for more information.</p>
+                    <img class="back" src="images/services-right-dec.png" alt="">
+                </div>
+                <div class="all-box">
+                    <div class="box">
+                        <img src="images/service-icon-01.png" alt="">
+                        <h4>App Maintenance</h4>
+                        <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <div class="text-button">
+                                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                    </div>
+                    
+                    <div class="box">
+                        <img src="images/service-icon-02.png" alt="">
+                        <h4>Rocket Speed of App</h4>
+                        <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <div class="text-button">
+                                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/service-icon-03.png" alt="">
+                        <h4>Multi Workflow Idea</h4>
+                        <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <div class="text-button">
+                                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                    </div>
+
+                    <div class="box">
+                        <img src="images/service-icon-04.png" alt="">
+                        <h4>24/7 Help & Support</h4>
+                        <p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <div class="text-button">
+                                <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </section>
+    <!-- end in amazing -->
+
+    <!-- start in about -->
+    <section id="about">
+        <div class="about">
+            <div class="container">
+                <div class="content-about">
+                    <div class="text-about">
+                        <h1>About  <span>What We Do</span> & Who We Are</h1>
+                        <img src="images/heading-line-dec.png" alt="">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+
+                        <div class="box-about">
+                            <div class="box">
+                                <h4>24/7 Support & Help</h4>
+                                <p>Lorem Ipsum Text</p>
+                            </div>
+
+                            <div class="box">
+                                <h4>24/7 Support & Help</h4>
+                                <p>Lorem Ipsum Text</p>
+                            </div>
+
+                            <div class="box">
+                                <h4>24/7 Support & Help</h4>
+                                <p>Lorem Ipsum Text</p>
+                            </div>
+
+                            <div class="box">
+                                <h4>24/7 Support & Help</h4>
+                                <p>Lorem Ipsum Text</p>
+                            </div>
+                        </div>
+                        <div class="free">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor idunte ut labore et dolore adipiscing magna.</p>
+                            <button class="btn">Start 14-Day Free Trial</button>
+                        </div>
+                    </div>
+                    <div class="img-about">
+                        <img src="images/about-right-dec.png" alt="">
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- end in about -->
+
+    <!-- start in check -->
+
+    <section id="services">
+        <div class="container">
+            <div class="check">
+
+                <div class="text-check">
+                    <h1>Check What <span>The Clients Say</span> About Our App Dev</h1>
+                    <img src="images/heading-line-dec.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+                
+                <div class="apperent-all-element">
+
+                    <div class="apperent-element">
+                        <div class="element-person" data-cat = ".PersonOne" >
+                            <div class="text-person">
+                                <h4>David Martino Co</h4>
+                                <p>30 November 2021</p>
+                            </div>
+                            <div class="textTow">
+                                <p>Financial Apps</p>
+                            </div>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="rating">4.8</span>
+                            </div>
+                        </div>
+    
+                        <div class="element-person" data-cat = ".PersonTow">
+                            <div class="text-person">
+                                <h4>David Martino Co</h4>
+                                <p>30 November 2021</p>
+                            </div>
+                            <div class="textTow">
+                                <p>Financial Apps</p>
+                            </div>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="rating">4.8</span>
+                            </div>
+                        </div>
+    
+                        <div class="element-person" data-cat = ".PersonThree">
+                            <div class="text-person">
+                                <h4>David Martino Co</h4>
+                                <p>30 November 2021</p>
+                            </div>
+                            <div class="textTow">
+                                <p>Financial Apps</p>
+                            </div>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="rating">4.8</span>
+                            </div>
+                        </div>
+    
+                        <div class="element-person" data-cat = ".PersonFour">
+                            <div class="text-person">
+                                <h4>David Martino Co</h4>
+                                <p>30 November 2021</p>
+                            </div>
+                            <div class="textTow">
+                                <p>Financial Apps</p>
+                            </div>
+                            <div class="star">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="rating">4.8</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="all-apperent-box">
+                        <div class="client-box PersonOne active">
+                            <div class="text-client">
+                                <p>CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                            </div>
+                            <div class="img-box">
+                                <img src="images/client-image.jpg" alt="">
+                                <div class="name-client">
+                                    <h1>Jake one H. Nyo</h1>
+                                    <p>CTO of Digital Company</p>
+                                </div>
+                            </div>
+                         </div>
+
+                         <div class="client-box PersonTow 1">
+                            <div class="text-client">
+                                <p>CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                            </div>
+                            <div class="img-box">
+                                <img src="images/client-image.jpg" alt="">
+                                <div class="name-client">
+                                    <h1>Jake tow H. Nyo</h1>
+                                    <p>CTO of Digital Company</p>
+                                </div>
+                            </div>
+                         </div>
+
+                         <div class="client-box PersonThree 1">
+                            <div class="text-client">
+                                <p>CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                            </div>
+                            <div class="img-box">
+                                <img src="images/client-image.jpg" alt="">
+                                <div class="name-client">
+                                    <h1>Jake three H. Nyo</h1>
+                                    <p>CTO of Digital Company</p>
+                                </div>
+                            </div>
+                         </div>
+
+                         <div class="client-box PersonFour 1">
+                            <div class="text-client">
+                                <p>CTO, Lorem ipsum dolor sit amet, consectetur adpiscing elit, sed do eismod tempor idunte ut labore et dolore magna aliqua darwin kengan lorem ipsum dolor sit amet, consectetur picing elit massive big blasta.”</p>
+                            </div>
+                            <div class="img-box">
+                                <img src="images/client-image.jpg" alt="">
+                                <div class="name-client">
+                                    <h1>Jake four H. Nyo</h1>
+                                    <p>CTO of Digital Company</p>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end in check -->
+
+    <!-- start in price -->
+    <section id="newslatter">
+        <div class="container">
+            <div class="price">
+                <div class="text-price">
+                    <h1>Check What <span>The Clients Say</span> About Our App Dev</h1>
+                    <img src="images/heading-line-dec.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna.</p>
+                </div>
+                <div class="boxes-price">
+                    <div class="box">
+                        <div class="content-box">
+                            <h4>pusinenes plan app</h4>
+                            <div class="img">
+                                <img src="images/pricing-table-01.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Lorem Ipsum Dolores</li>
+                                <li>20 TB of Storage</li>
+                                <li class="non">Life-time Support</li>
+                                <li class="non">Premium Add-Ons</li>
+                                <li class="non">Fastest Network</li>
+                                <li class="non">More Options</li>
+                            </ul>
+                            <button>Purchase This Plan Now</button>
+                            <div class="back-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="content-box" style="transform: scale(1.1);">
+                            <h4>pusinenes plan app</h4>
+                            <div class="img">
+                                <img src="images/pricing-table-01.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Lorem Ipsum Dolores</li>
+                                <li>20 TB of Storage</li>
+                                <li>Life-time Support</li>
+                                <li class="non">Premium Add-Ons</li>
+                                <li class="non">Fastest Network</li>
+                                <li class="non">More Options</li>
+                            </ul>
+                            <button>Purchase This Plan Now</button>
+                            <div class="back-img">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="content-box">
+                            <h4>pusinenes plan app</h4>
+                            <div class="img">
+                                <img src="images/pricing-table-01.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Lorem Ipsum Dolores</li>
+                                <li>20 TB of Storage</li>
+                                <li>Life-time Support</li>
+                                <li>Premium Add-Ons</li>
+                                <li class="non">Fastest Network</li>
+                                <li class="non">More Options</li>
+                            </ul>
+                            <button>Purchase This Plan Now</button>
+                            <div class="back-img">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end in price -->
+
+    <!-- start in footer -->
+    <footer>
+        <div class="container">
+            <div class="text-footer">
+                <h2>Join Our Mailing List To Receive The News & Latest Trends</h2>
+                <form action="">
+                    <input type="email" placeholder="email addres">
+                    <button type="submit" class="main-button">Subscribe Now <i class="fa fa-angle-right"></i></button>
+                </form>
+            </div>
+            <div class="element-footer">
+                <div class="contact-footer">
+                    <h4>Contact Us</h4>
+                    <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
+                    <p><a href="#">010-020-0340</a></p>
+                    <p><a href="#">info@company.co</a></p>
+                </div>
+                  <div class="about-footer">
+                        <h4>About Us</h4>
+                        <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Services</a></li>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Testimonials</a></li>
+                          <li><a href="#">Pricing</a></li>
+                        </ul>
+                        <ul>
+                          <li><a href="#">About</a></li>
+                          <li><a href="#">Testimonials</a></li>
+                          <li><a href="#">Pricing</a></li>
+                        </ul>
+                  </div>
+                  <div class="Useful-footer">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#">Free Apps</a></li>
+                      <li><a href="#">App Engine</a></li>
+                      <li><a href="#">Programming</a></li>
+                      <li><a href="#">Development</a></li>
+                      <li><a href="#">App News</a></li>
+                    </ul>
+                    <ul>
+                      <li><a href="#">App Dev Team</a></li>
+                      <li><a href="#">Digital Web</a></li>
+                      <li><a href="#">Normal Apps</a></li>
+                    </ul>
+                  </div>
+                  <div class="company-footer">
+                    <h4>About Our Company</h4>
+                    <div class="logo">
+                      <img src="assets/images/white-logo.png" alt="">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                  </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end in footer -->
+
+    <!-- start in bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

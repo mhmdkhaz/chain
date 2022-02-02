@@ -1,0 +1,105 @@
+.active{
+    color: $colorfontblue
+  }
+
+nav{
+    z-index: 100;
+    padding: $marginelementnav;
+    box-shadow:0 7px 10px -9px  $colorfontblack;
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        @media (max-width : $minmobile) {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        a{
+            display: none;
+            @media (max-width : $minmobile) {
+            display: block;
+            font-size: 25px;
+            }
+        }
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .element{
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            list-style:none;
+            @media  (max-width : $minmobile){
+                height: 0;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: $colorwhite;
+                overflow-x: hidden;
+                transition: 0.5s;
+            }
+            .closebtn{
+                display: none;
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 35px;
+                color: $colorfontblue;
+                transition: 0.3s;
+                margin-top: 40px;
+                @media  (max-width : $minmobile){
+                    display: block;
+                }
+            }
+            li{
+                // a{
+                padding-left: $padleftandright;
+                font-weight: 500;
+                font-size: $fontsize;
+                text-transform: $textcap;
+                transition: all 0.2s ease 0s;
+                line-height: 40px;
+                border: transparent;
+                letter-spacing: 1px;
+
+                text-decoration: none;
+                &:hover{
+                    cursor: pointer;
+                    color: $colorfontblue;
+                }
+                @media (max-width : $minmobile) {
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 2px solid $colorwhite;
+                    background-color: $colorfontblue;
+                    color: $colorwhite;
+                }
+            // }
+            .icon{
+                position: relative;
+                display: none;
+                @media (max-width : $minmobile) {
+                    display: block;
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                }
+                i{
+                    font-size: 30px;
+                }
+            }
+          }
+        }
+    }
+}
